@@ -26,23 +26,82 @@ def talkerCmd():
     pub = rospy.Publisher('cmd', String) #, queue_size=10)
     rospy.init_node('talkerCmd', anonymous=True)
     r = rospy.Rate(10) # 10hz
-    i = 0
+   
+    # Tableau des valeurs de la wiimote avec data 
+    un = data.buttons[0]
+    deux = data.buttons[1]
+    A = data.buttons[2]
+    B = data.buttons[3]
+    Plus = data.buttons[4]
+    Moins = data.buttons[5]
+    Haut = data.buttons[7]
+    Bas = data.buttons[6]
+    Gauche = data.buttons[8]
+    Droite = data.buttons[9]
+    Home = data.buttons[10]
+
     sens = 1
     while not rospy.is_shutdown():
-	
-	if  ( ( i>= -100) and (i<=100) ):
-	    if (sens == 1):
-		i+=1
-            else:
-                i-=1
+	#Vx = -4*(120 - data.axes[1][cwiid.Y])
+        #Vy = -4*(120 - data.axes[1][cwiid.X])
 
-	if ( (i>=100) and (sens == 1) ):
-	    sens = 0
+ 	# Cast basse valeur, evite les oscillations
+            if  A:    # A botton
+		print "A"
+		flag = 1-flag 
+		Vx = 0
+		Vy = 0
+		theta = 0
+            if  B:    # B together
+		print "B"
+            if  Haut:  # Up botton
+		print "UP"
+		Vy+=5
+            if  Gauche:  # Left botton
+		print "LEFT"
+		Vx+=5
+            if  Droite:  # Right botton
+		print "RIGHT"
+		Vx-=5
+            if  Bas:  # Down botton
+		print "DOWN"
+		Vy-=5
+            if  Moins:   # Minus botton
+		print "-"
+		theta-=5
+            if  Plus: # Plus botton
+		print "+"
+		theta+=5
+            if  Home:   # home botton
+		print "HOME"
+            if  Un:   # 1 botton
+		#theta-=5
+            if  Deux:   # 2 botton
+		#theta+=5
+	    #if theta >
+#		theta=5
+#	    if theta <
+#		theta=-5
+	    #Commandes moteurs
+	    #print Vx, " ", Vy, " ", theta
 
-	if ( (i<= -100) and (sens == 0) ):
-            sens = 1
+	#Cast des valeurs
+	if Vx > 127:
+	    Vx = 127
+	elif Vx < (-127):
+	    Vx = -127
+	if Vy > 127:
+	    Vy = 127
+	elif Vy <(-127):
+	    Vy = -127
+
+	if flag == 0: 
+            str = 0+"_"+0+"_"+0
+		
+	#print Vx," ", Vy, " ", theta
+        #ser.write(miseEnForme.miseEnForme(Vx,Vy,theta))
 	
-        str = "0 0 %d"%i
+        str = %Vx+"_"+%Vy+"_"+theta
         rospy.loginfo(str)
         pub.publish(str)
         r.sleep()
