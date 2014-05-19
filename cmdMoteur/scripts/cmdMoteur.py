@@ -8,10 +8,24 @@ class cmdMoteur:
    # definition de la methode speciale __init__ (constructeur)
    def __init__(self):
 	self.ser = serial.Serial("/dev/ttyAMA0")
-	print "toto"
 
    # definition de la methode miseEnForme()
-   def envoiCommande(self,Vx,Vy,Omega):	
+   def envoiCommande(self,Vx,Vy,Omega):
+
+	 #Cast des valeurs
+        if Vx > 127:
+            Vx = 127
+        elif Vx < (-127):
+            Vx = -127
+        if Vy > 127:
+            Vy = 127
+        elif Vy <(-127):
+            Vy = -127
+        if Omega > 63:
+            Omega = 63
+        elif Omega <(-63):
+            Omega = -63
+	
 	#Reglage de Vx
 	if Vx >= 0 :
 		octet0 = int('A8',16) #On force le PF vx a 1
