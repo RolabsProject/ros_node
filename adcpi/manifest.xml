@@ -1,0 +1,17 @@
+<package>
+  <description brief="adcpi">
+
+     adcpi
+
+  </description>
+  <author>pi</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/adcpi</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+

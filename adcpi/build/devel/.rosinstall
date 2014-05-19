@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/ROLABS/ros_node/adcpi/build/devel/setup.sh
