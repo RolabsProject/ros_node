@@ -3,17 +3,18 @@
 import rospy
 from cmdMoteur import cmdMoteur
 from std_msgs.msg import String
+from cmdMoteur.msg import Cmd
 
 def callback(data):
     global myCmdMoteur
 
     #rospy.loginfo(rospy.get_caller_id()+"I heard %s",data.data)
     cmd = data.data.split(' ')
-    Vx = int(cmd[0])
-    Vy = int(cmd[1])
-    theta = int(cmd[2])
-    rospy.loginfo("Vx : %d\tVy : %d\tTheta : %d "%(Vx, Vy, theta) )
-    myCmdMoteur.envoiCommande(Vx,Vy,theta)
+    msg = Cmd(vx=int(cmd[0]),
+              vy=int(cmd[1]),
+              theta=int(cmd[2]))
+    rospy.loginfo("Vx : %d\tVy : %d\tTheta : %d "%(msg.vx, msg.vy, msg.theta) )
+    myCmdMoteur.envoiCommande(msg)
 
 def cmdMoteur_node():
     global myCmdMoteur

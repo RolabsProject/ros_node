@@ -1,5 +1,8 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../src/cmdMoteur/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
+  "../msg_gen/cpp/include/cmdMoteur/cmd.h"
 )
 
 # Per-language clean rules from dependency scanning.
