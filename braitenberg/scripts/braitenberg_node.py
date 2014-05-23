@@ -2,19 +2,21 @@
 
 import rospy
 from std_msgs.msg import String
-from sensor_msgs.msg import Joy
-from cmdMoteur.msg import Cmd
+from std_msgs.msg import Float32
+#from cmdMoteur.msg import Cmd
 
 
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id()+"I heard %s",data.axes)
+    rospy.loginfo(rospy.get_caller_id()+"I heard %f",data.data)
     
 def braitenberg():
 
     rospy.init_node('braitenberg', anonymous=True)
 
-    rospy.Subscriber("joy", Joy, callback)
+    for i in range(0, 4+1):
+    	rospy.Subscriber("capteurs/capteur%d"%i, Float32, callback)
 
+    #rospy.Subscriber("capteurs/capteur0", Float32, callback)
     rospy.spin()
 
 
@@ -23,6 +25,9 @@ def braitenberg():
    
 
     while not rospy.is_shutdown():
+        Vx    = 0
+        Vy    = 0
+        theta = 0
 
 
 	#Cast des valeurs
@@ -35,7 +40,7 @@ def braitenberg():
 	elif Vy <(-127):
 	    Vy = -127
 	
-        str = %Vx+"_"+%Vy+"_"+theta
+        str = Vx+"_"+Vy+"_"+theta
         rospy.loginfo(str)
         pub.publish(str)
         r.sleep()
