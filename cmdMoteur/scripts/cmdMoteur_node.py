@@ -20,7 +20,7 @@ def cmdMoteur_node():
     global myCmdMoteur
     myCmdMoteur = cmdMoteur()
     rospy.init_node('cmdMoteur_node', anonymous=True)
-    rospy.Subscriber("cmd", String, callback)
+    rospy.Subscriber("cmd", Cmd, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
