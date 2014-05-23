@@ -1,4 +1,5 @@
 /home/pi/ROLABS/ros_node/wiimote2moteurs/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/pi/ROLABS/ros_node/wiimote2moteurs/build/CMakeFiles/ROSBUILD_genmsg_py.dir
 /home/pi/ROLABS/ros_node/wiimote2moteurs/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
 /home/pi/ROLABS/ros_node/wiimote2moteurs/build/CMakeFiles/clean_test_results.dir
 /home/pi/ROLABS/ros_node/wiimote2moteurs/build/CMakeFiles/doxygen.dir

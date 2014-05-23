@@ -2,9 +2,10 @@
 
 import rospy
 from std_msgs.msg import String
+from wiimote2moteurs.msg import Cmd
 
 def talkerCmd():
-    pub = rospy.Publisher('cmd', String) #, queue_size=10)
+    pub = rospy.Publisher('cmd', Cmd) #, queue_size=10)
     rospy.init_node('talkerCmd', anonymous=True)
     r = rospy.Rate(10) # 10hz
     i = 0
@@ -23,9 +24,12 @@ def talkerCmd():
 	if ( (i<= -100) and (sens == 0) ):
             sens = 1
 	
-        str = "0 0 %d"%i
-        rospy.loginfo(str)
-        pub.publish(str)
+        msg = Cmd(vx=0,
+                  vy=0,
+                  theta=i)
+
+        rospy.loginfo(msg)
+        pub.publish(msg)
         r.sleep()
         
 if __name__ == '__main__':

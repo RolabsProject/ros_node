@@ -1,5 +1,8 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../src/wiimote2moteurs/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
+  "../msg_gen/cpp/include/wiimote2moteurs/cmd.h"
 )
 
 # Per-language clean rules from dependency scanning.

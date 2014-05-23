@@ -3,22 +3,26 @@
 
 import rospy
 from adcpi import adcpi
-from std_msgs.msg import String
+from std_msgs.msg import Float32MultiArray
 
 
 def adcpi_node():
     global capteurs
-    pub = rospy.Publisher('capteurs', String)
+
+    
+    capteurs = rospy.Publisher('capteurs', Float32MultiArray)
+
     rospy.init_node('adcpi_node', anonymous=True)
     r = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
-        str = "%f %f %f %f %f"%(	capteurs.capteurRead(0), 
-									capteurs.capteurRead(1), 
-									capteurs.capteurRead(2), 
-									capteurs.capteurRead(3), 
-									capteurs.capteurRead(4) ) 
-        rospy.loginfo(str)
-        pub.publish(str)
+
+	val_capteurs = []
+	
+	for i range(0, 4+1):	
+            val_capteurs.append( capteurs.capteurRead(i)
+        
+	rospy.loginfo("Capteurs: " + val_capteurs)
+        pub.publish(val_capteurs)
         r.sleep()
         
 if __name__ == '__main__':

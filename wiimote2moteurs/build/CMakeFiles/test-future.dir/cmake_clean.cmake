@@ -1,4 +1,6 @@
 FILE(REMOVE_RECURSE
+  "../msg_gen"
+  "../src/wiimote2moteurs/msg"
   "CMakeFiles/test-future"
 )
 
