@@ -17,7 +17,7 @@ def adcpi_node():
     while not rospy.is_shutdown():
 
         val_capteurs = []
-	val_distance = []
+        val_distance = []
         for i in range(0, 4+1):
 		val_capteurs.append( adcpiCap.capteurRead(i) )
 		dist_value = 12/adcpiCap.capteurRead(i);

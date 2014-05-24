@@ -35,10 +35,14 @@ def callback(data):
 	
     cmdstr = str(int(Vx)) + " " + str(int(Vy)) + " " + str(int(theta))
     rospy.loginfo(cmdstr)
-    
+	
+    dataTemp = Float32MultiArray()
+    dataTemp.data = data.data + tuple([int(Vx), int(Vy), int(theta)])
+	
     pub = rospy.Publisher('cmd', String) #, queue_size=10)
+    pub_capt = rospy.Publisher('cmdCapteurs', Float32MultiArray)
     pub.publish(cmdstr)
-
+    pub_capt.publish(dataTemp)
 
 
     
