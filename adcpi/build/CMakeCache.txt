@@ -470,17 +470,17 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 _rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1400455372.81
+_rosbuild_cached_flag_time:INTERNAL=1400888415.56
 _roslang_LANGS:INTERNAL=
-_rospack_deps_manifests_invoke_result:INTERNAL=/opt/ros/groovy/share/cpp_common/package.xml;/opt/ros/groovy/share/rostime/package.xml;/opt/ros/groovy/share/roscpp_traits/package.xml;/opt/ros/groovy/share/roscpp_serialization/package.xml;/opt/ros/groovy/share/genmsg/package.xml;/opt/ros/groovy/share/genpy/package.xml;/opt/ros/groovy/share/message_runtime/package.xml;/opt/ros/groovy/share/std_msgs/package.xml;/opt/ros/groovy/share/rosgraph/package.xml;/opt/ros/groovy/share/rosgraph_msgs/package.xml;/opt/ros/groovy/share/catkin/package.xml;/opt/ros/groovy/share/rospack/package.xml;/opt/ros/groovy/share/roslib/package.xml;/opt/ros/groovy/share/rospy/package.xml;/opt/ros/groovy/share/rosconsole/package.xml;/opt/ros/groovy/share/xmlrpcpp/package.xml;/opt/ros/groovy/share/roscpp/package.xml
+_rospack_deps_manifests_invoke_result:INTERNAL=/opt/ros/groovy/share/cpp_common/package.xml;/opt/ros/groovy/share/rostime/package.xml;/opt/ros/groovy/share/roscpp_traits/package.xml;/opt/ros/groovy/share/roscpp_serialization/package.xml;/opt/ros/groovy/share/genmsg/package.xml;/opt/ros/groovy/share/genpy/package.xml;/opt/ros/groovy/share/message_runtime/package.xml;/opt/ros/groovy/share/std_msgs/package.xml;/opt/ros/groovy/share/rosgraph/package.xml;/opt/ros/groovy/share/rosgraph_msgs/package.xml;/opt/ros/groovy/share/catkin/package.xml;/opt/ros/groovy/share/rospack/package.xml;/opt/ros/groovy/share/roslib/package.xml;/opt/ros/groovy/share/rospy/package.xml
 _rospack_msgsrv_gen_invoke_result:INTERNAL=
 adcpi_CFLAGS_OTHER:INTERNAL=
 adcpi_INCLUDEDIR:INTERNAL=
 adcpi_INCLUDE_DIRS:INTERNAL=/opt/ros/groovy/include
 adcpi_LDFLAGS_OTHER:INTERNAL=
-adcpi_LIBRARIES:INTERNAL=roscpp;:/usr/lib/libboost_signals-mt.so;:/usr/lib/libboost_filesystem-mt.so;rosconsole;:/usr/lib/libboost_regex-mt.so;:/usr/lib/liblog4cxx.so;xmlrpcpp;roscpp_serialization;rostime;:/usr/lib/libboost_date_time-mt.so;:/usr/lib/libboost_system-mt.so;:/usr/lib/libboost_thread-mt.so;pthread;cpp_common
+adcpi_LIBRARIES:INTERNAL=roscpp_serialization;rostime;:/usr/lib/libboost_date_time-mt.so;:/usr/lib/libboost_system-mt.so;:/usr/lib/libboost_thread-mt.so;pthread;cpp_common
 adcpi_LIBRARY_DIRS:INTERNAL=/opt/ros/groovy/lib
-adcpi_cached_manifest_list:INTERNAL=/home/pi/ROLABS/ros_node/adcpi/manifest.xml;/opt/ros/groovy/share/cpp_common/package.xml;/opt/ros/groovy/share/rostime/package.xml;/opt/ros/groovy/share/roscpp_traits/package.xml;/opt/ros/groovy/share/roscpp_serialization/package.xml;/opt/ros/groovy/share/genmsg/package.xml;/opt/ros/groovy/share/genpy/package.xml;/opt/ros/groovy/share/message_runtime/package.xml;/opt/ros/groovy/share/std_msgs/package.xml;/opt/ros/groovy/share/rosgraph/package.xml;/opt/ros/groovy/share/rosgraph_msgs/package.xml;/opt/ros/groovy/share/catkin/package.xml;/opt/ros/groovy/share/rospack/package.xml;/opt/ros/groovy/share/roslib/package.xml;/opt/ros/groovy/share/rospy/package.xml;/opt/ros/groovy/share/rosconsole/package.xml;/opt/ros/groovy/share/xmlrpcpp/package.xml;/opt/ros/groovy/share/roscpp/package.xml
+adcpi_cached_manifest_list:INTERNAL=/home/pi/ROLABS/ros_node/adcpi/manifest.xml;/opt/ros/groovy/share/cpp_common/package.xml;/opt/ros/groovy/share/rostime/package.xml;/opt/ros/groovy/share/roscpp_traits/package.xml;/opt/ros/groovy/share/roscpp_serialization/package.xml;/opt/ros/groovy/share/genmsg/package.xml;/opt/ros/groovy/share/genpy/package.xml;/opt/ros/groovy/share/message_runtime/package.xml;/opt/ros/groovy/share/std_msgs/package.xml;/opt/ros/groovy/share/rosgraph/package.xml;/opt/ros/groovy/share/rosgraph_msgs/package.xml;/opt/ros/groovy/share/catkin/package.xml;/opt/ros/groovy/share/rospack/package.xml;/opt/ros/groovy/share/roslib/package.xml;/opt/ros/groovy/share/rospy/package.xml
 adcpi_temp:INTERNAL=
 roslib_path:INTERNAL=/opt/ros/groovy/share/roslib
 
