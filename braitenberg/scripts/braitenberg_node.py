@@ -6,8 +6,10 @@ from std_msgs.msg import Float32MultiArray, ByteMultiArray
 
 
 def callback(data):
-   # print data
+    global pub
 
+   # print data
+    
     Vx    = 0
     Vy    = 0
     theta = 0
@@ -34,6 +36,7 @@ def callback(data):
 
     
 def braitenberg():
+    global pub
 
     rospy.init_node('braitenberg', anonymous=True)
     rospy.Subscriber('capteurs', Float32MultiArray, callback)
